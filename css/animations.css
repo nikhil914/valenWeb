@@ -1,0 +1,316 @@
+/* ========================================
+   Valentine's Prank App - Animations
+   Pure CSS animations for smooth 60fps
+   ======================================== */
+
+/* ========================================
+   Splash Screen Animations
+   ======================================== */
+@keyframes splashHeartBeat {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* ========================================
+   General Animations
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   Button Animations
+   ======================================== */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* ========================================
+   Heart Animations
+   ======================================== */
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: var(--heart-opacity, 0.4);
+    }
+
+    90% {
+        opacity: var(--heart-opacity, 0.4);
+    }
+
+    100% {
+        transform: translateY(calc(-100vh - 100px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-40px) scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   Success Screen Animations
+   ======================================== */
+@keyframes floatImage {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 8px 32px rgba(255, 75, 100, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 8px 32px rgba(255, 75, 100, 0.6);
+    }
+}
+
+@keyframes borderRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes cornerPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes floatSparkle {
+    0% {
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   Confetti Animation
+   ======================================== */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confettiSway {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-15px);
+    }
+
+    75% {
+        transform: translateX(15px);
+    }
+}
+
+/* ========================================
+   Screen Transitions
+   ======================================== */
+.screen.fade-out {
+    animation: fadeOut 0.4s ease-out forwards;
+}
+
+.screen.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.screen.scale-fade-in {
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* ========================================
+   Breathing Scale for Yes Button
+   ======================================== */
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(var(--scale, 1));
+    }
+
+    50% {
+        transform: scale(calc(var(--scale, 1) * 1.05));
+    }
+}
+
+.yes-button.growing {
+    animation: breathe 0.8s ease-in-out infinite;
+}

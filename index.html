@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Will you be my Valentine? A special interactive question just for you!">
+  <title>BMW? CAR</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Floating Hearts Background -->
+  <div id="floating-hearts" class="floating-hearts-container"></div>
+
+  <!-- Screen 1: Splash -->
+  <section id="splash-screen" class="screen splash-screen active">
+    <div class="splash-content">
+      <div class="splash-heart">❤️</div>
+      <p class="splash-text">I have a question...</p>
+      <div class="loading-dots">
+        <span class="dot">❤️</span>
+        <span class="dot">❤️</span>
+        <span class="dot">❤️</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 2: Question -->
+  <section id="question-screen" class="screen question-screen">
+    <div class="question-content">
+      <div class="heart-icon">❤️</div>
+      <h1 class="question-text">Will you be my Valentine?</h1>
+      <p id="attempt-counter" class="attempt-counter"></p>
+      
+      <div id="buttons-container" class="buttons-container">
+        <button id="yes-button" class="yes-button">Yes! 💕</button>
+        <button id="no-button-static" class="no-button">No</button>
+      </div>
+      
+      <p id="hint-text" class="hint-text">💕 Make your choice! 💕</p>
+    </div>
+    
+    <!-- Evasive No button (positioned absolutely) -->
+    <button id="no-button" class="no-button evasive" style="display: none;">No</button>
+  </section>
+
+  <!-- Screen 3: Success -->
+  <section id="success-screen" class="screen success-screen">
+    <div id="confetti-container" class="confetti-container"></div>
+    
+    <div class="success-content">
+      <!-- Animated Image Container -->
+      <div class="image-container">
+        <div class="corner-heart top-left">💖</div>
+        <div class="corner-heart top-right">💖</div>
+        <div class="corner-heart bottom-left">💖</div>
+        <div class="corner-heart bottom-right">💖</div>
+        
+        <div class="floating-decorations left">
+          <span class="decoration heart">❤️</span>
+          <span class="decoration heart">❤️</span>
+          <span class="decoration heart">❤️</span>
+        </div>
+        <div class="floating-decorations right">
+          <span class="decoration sparkle">✨</span>
+          <span class="decoration sparkle">⭐</span>
+          <span class="decoration sparkle">✨</span>
+        </div>
+        
+        <div class="image-frame">
+          <img id="couple-image" src="images/couple_photo.jpg" alt="My Valentine" class="couple-image">
+          <div class="image-fallback">
+            <span class="fallback-heart">❤️</span>
+            <span class="fallback-text">My Valentine 💕</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Success Messages -->
+      <h1 class="success-title">Yay! 💕</h1>
+      <p class="success-subtitle">I knew you'd say yes!</p>
+      
+      <div class="message-box">
+        <p>You've made me the happiest person!<br>Can't wait to celebrate with you! 🌹</p>
+      </div>
+      
+      <!-- Action Buttons -->
+      <button id="share-button" class="share-button">
+        <span>📤</span> Share the News!
+      </button>
+      <button id="replay-button" class="replay-button">🔄 Play Again</button>
+    </div>
+  </section>
+
+  <script src="js/positioning.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
